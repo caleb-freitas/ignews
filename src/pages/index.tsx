@@ -1,9 +1,15 @@
-import type { NextPage } from 'next'
+import styles from '../styles/home.module.scss'
+import Head from 'next/head'
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <h1>Hello, next</h1>
+    <>
+      <Head>
+        <title>Inicio | ig.news</title>
+      </Head>
+      <h1>
+        Hello, next
+      </h1>
+    </>
   )
 }
-
-export default Home
