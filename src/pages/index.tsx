@@ -23,11 +23,10 @@ export default function Home(props: HomeProps) {
 
       <main className={styles.contentContainer}>
         <section className={styles.hero}>
-          <span>hello, there. welcome!</span>
           <h1>news about the <span>react</span> world</h1>
           <p>
-            get access to all the publication <br />
-            <span>for only {amount} a month</span>
+            get access to all publications<br />
+            <span>for only {amount} per month</span>
           </p>
           <SubscribeButton priceId={priceId} />
         </section>
