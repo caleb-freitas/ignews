@@ -1,6 +1,11 @@
 import styles from './styles.module.scss'
 
-export function SubscribeButton() {
+type SubscribeButtonProps = {
+  priceId: string
+}
+
+export function SubscribeButton(props: SubscribeButtonProps) {
+  const { priceId } = props
   return (
     <button
       type="button"
