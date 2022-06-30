@@ -11,9 +11,9 @@ export function Header() {
             href="#"
             className={styles.active}
           >
-            Home
+            home
           </a>
-          <a href="#">Posts</a>
+          <a href="#">posts</a>
         </nav>
         <SignInButton />
       </div>
