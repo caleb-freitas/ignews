@@ -1,8 +1,11 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import NextAuth from "next-auth"
+import GitHubProvider from "next-auth/providers/github"
 
-export function getUsers(request: NextApiRequest, response: NextApiResponse) {
-  const users = [
-    { id: 1, name: 'caleb' }
+export default NextAuth({
+  providers: [
+    GitHubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    })
   ]
-  return response.json(users)
-}
+})
