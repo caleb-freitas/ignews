@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import styles from './home.module.scss'
 import Head from 'next/head'
-import { SubscribeButton } from '../components/SubscribeBUtton'
+import { SubscribeButton } from '../components/SubscribeButton'
 import { stripe } from '../services/stripe'
 
 type Product = {
@@ -37,7 +37,7 @@ export default function Home(props: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const price = await stripe.prices.retrieve(process.env.PRODUCT_PRICE_ID as string, {
+  const price = await stripe.prices.retrieve(process.env.STRIPE_PRODUCT_PRICE_ID as string, {
     expand: ['product']
   })
 
